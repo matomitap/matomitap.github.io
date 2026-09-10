@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我爱搞-创意DIY与动手实践兴趣社区</title>
+<meta name="description" content="我爱搞是一个面向动手爱好者的创意DIY与动手实践社区，提供手工制作教程、工具使用指南、电子制作、木工、模型、园艺改造等实用内容与经验交流。">
+<meta name="keywords" content="我爱搞,DIY,手工制作,动手实践,创意改造,电子制作,木工,模型,兴趣社区">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --brand:#e8590c;
+    --brand-dark:#c2410c;
+    --brand-light:#fff4ec;
+    --ink:#1f2328;
+    --ink-soft:#57606a;
+    --line:#e6e8eb;
+    --bg:#f7f8fa;
+    --card:#ffffff;
+    --radius:14px;
+    --shadow:0 6px 24px rgba(24,28,35,.07);
+    --shadow-hover:0 12px 32px rgba(24,28,35,.13);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.7;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  ul{list-style:none;}
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- 顶部条 ---------- */
+  .topbar{
+    background:#1f2328;
+    color:#c9ced6;
+    font-size:13px;
+  }
+  .topbar .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    height:38px;gap:16px;flex-wrap:wrap;
+  }
+  .topbar .tip{display:flex;align-items:center;gap:8px;}
+  .topbar .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;}
+  .topbar nav{display:flex;gap:18px;}
+  .topbar nav a{color:#c9ced6;transition:color .2s;}
+  .topbar nav a:hover{color:#fff;}
+
+  /* ---------- 页眉 ---------- */
+  header.site-header{
+    background:var(--card);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:20px;height:72px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .logo-mark{
+    width:40px;height:40px;border-radius:11px;
+    background:linear-gradient(135deg,var(--brand),#f59e0b);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:19px;letter-spacing:-1px;
+    box-shadow:0 4px 12px rgba(232,89,12,.35);
+  }
+  .logo-text b{display:block;font-size:19px;letter-spacing:.5px;line-height:1.2;}
+  .logo-text span{display:block;font-size:11.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;}
+
+  .main-nav{display:flex;gap:6px;flex:1;justify-content:center;}
+  .main-nav a{
+    padding:8px 15px;border-radius:9px;font-size:15px;color:var(--ink-soft);
+    font-weight:500;transition:all .2s;white-space:nowrap;
+  }
+  .main-nav a:hover{background:var(--brand-light);color:var(--brand-dark);}
+  .main-nav a.active{background:var(--brand);color:#fff;}
+
+  .header-actions{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+  .search-box{
+    display:flex;align-items:center;gap:6px;
+    background:var(--bg);border:1px solid var(--line);
+    border-radius:10px;padding:7px 12px;width:210px;
+    transition:border-color .2s,box-shadow .2s;
+  }
+  .search-box:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px rgba(232,89,12,.12);}
+  .search-box input{
+    border:none;background:transparent;outline:none;
+    font-size:14px;width:100%;color:var(--ink);font-family:inherit;
+  }
+  .search-box svg{flex-shrink:0;opacity:.5;}
+  .btn-join{
+    background:var(--brand);color:#fff;border:none;cursor:pointer;
+    padding:9px 20px;border-radius:10px;font-size:14.5px;font-weight:600;
+    font-family:inherit;transition:background .2s,transform .15s;
+  }
+  .btn-join:hover{background:var(--brand-dark);transform:translateY(-1px);}
+  .menu-toggle{
+    display:none;background:none;border:1px solid var(--line);
+    border-radius:9px;padding:7px 10px;cursor:pointer;
+  }
+  .menu-toggle span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px;}
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 380px at 88% -10%,rgba(245,158,11,.18),transparent 60%),
+      radial-gradient(700px 340px at 5% 110%,rgba(232,89,12,.14),transparent 62%),
+      #fff;
+    border-bottom:1px solid var(--line);
+    padding:56px 0 50px;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+  }
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--brand-light);color:var(--brand-dark);
+    font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;
+    margin-bottom:20px;border:1px solid rgba(232,89,12,.18);
+  }
+  .hero h1{
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.28;letter-spacing:-.5px;font-weight:800;
+    margin-bottom:18px;
+  }
+  .hero h1 em{font-style:normal;color:var(--brand);}
+  .hero p.lead{
+    font-size:16.5px;color:var(--ink-soft);max-width:560px;margin-bottom:28px;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px;}
+  .btn-primary{
+    background:var(--brand);color:#fff;padding:13px 28px;border-radius:11px;
+    font-weight:600;font-size:15.5px;box-shadow:0 8px 20px rgba(232,89,12,.28);
+    transition:all .2s;display:inline-block;
+  }
+  .btn-primary:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(232,89,12,.34);}
+  .btn-ghost{
+    background:#fff;color:var(--ink);padding:13px 26px;border-radius:11px;
+    border:1px solid var(--line);font-weight:600;font-size:15.5px;
+    transition:all .2s;display:inline-block;
+  }
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand-dark);}
+
+  .hero-stats{display:flex;gap:34px;flex-wrap:wrap;}
+  .hero-stats div b{display:block;font-size:22px;font-weight:800;color:var(--ink);}
+  .hero-stats div span{font-size:13px;color:var(--ink-soft);}
+
+  /* 首屏侧边卡片 */
+  .hero-panel{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);padding:24px;
+  }
+  .hero-panel h3{
+    font-size:15px;font-weight:700;margin-bottom:16px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .hero-panel h3::before{
+    content:"";width:4px;height:16px;border-radius:2px;background:var(--brand);
+  }
+  .step-list li{
+    display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);
+    font-size:14.5px;color:var(--ink-soft);
+  }
+  .step-list li:last-child{border-bottom:none;padding-bottom:0;}
+  .step-num{
+    flex-shrink:0;width:24px;height:24px;border-radius:8px;
+    background:var(--brand-light);color:var(--brand-dark);
+    font-size:12.5px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .step-list strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- 通用区块 ---------- */
+  section.block{padding:56px 0;}
+  section.block.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:20px;margin-bottom:30px;flex-wrap:wrap;
+  }
+  .sec-head h2{
+    font-size:clamp(21px,2.6vw,27px);font-weight:800;letter-spacing:-.3px;
+    display:flex;align-items:center;gap:11px;
+  }
+  .sec-head h2::before{
+    content:"";width:5px;height:24px;border-radius:3px;
+    background:linear-gradient(180deg,var(--brand),#f59e0b);
+  }
+  .sec-head p{font-size:14.5px;color:var(--ink-soft);margin-top:6px;}
+  .sec-head .more{
+    font-size:14px;color:var(--brand-dark);font-weight:600;
+    display:inline-flex;align-items:center;gap:5px;transition:gap .2s;
+  }
+  .sec-head .more:hover{gap:9px;}
+
+  /* ---------- 分类导航 ---------- */
+  .cat-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:16px;
+  }
+  .cat-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 18px;transition:all .22s;display:block;
+  }
+  .cat-card:hover{
+    transform:translateY(-4px);box-shadow:var(--shadow-hover);
+    border-color:rgba(232,89,12,.35);
+  }
+  .cat-icon{
+    width:42px;height:42px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:21px;margin-bottom:12px;background:var(--brand-light);
+  }
+  .cat-card h3{font-size:15.5px;font-weight:700;margin-bottom:5px;}
+  .cat-card p{font-size:13px;color:var(--ink-soft);line-height:1.55;}
+
+  /* ---------- 教程卡片 ---------- */
+  .tutorial-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:22px;
+  }
+  .t-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;transition:all .22s;display:flex;flex-direction:column;
+  }
+  .t-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);}
+  .t-thumb{
+    height:150px;position:relative;
+    display:flex;align-items:center;justify-content:center;
+    font-size:44px;color:#fff;
+  }
+  .t-thumb.g1{background:linear-gradient(135deg,#f97316,#fbbf24);}
+  .t-thumb.g2{background:linear-gradient(135deg,#0ea5e9,#22d3ee);}
+  .t-thumb.g3{background:linear-gradient(135deg,#16a34a,#84cc16);}
+  .t-thumb.g4{background:linear-gradient(135deg,#8b5cf6,#d946ef);}
+  .t-thumb.g5{background:linear-gradient(135deg,#ef4444,#f97316);}
+  .t-thumb.g6{background:linear-gradient(135deg,#475569,#94a3b8);}
+  .t-badge{
+    position:absolute;top:12px;left:12px;
+    background:rgba(0,0,0,.42);color:#fff;font-size:12px;
+    padding:3px 10px;border-radius:999px;backdrop-filter:blur(4px);
+  }
+  .t-body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1;}
+  .t-body h3{font-size:16.5px;font-weight:700;line-height:1.45;margin-bottom:9px;}
+  .t-body p{font-size:13.8px;color:var(--ink-soft);line-height:1.65;flex:1;}
+  .t-meta{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-top:16px;padding-top:13px;border-top:1px solid var(--line);
+    font-size:12.8px;color:var(--ink-soft);
+  }
+  .t-meta .lvl{
+    background:var(--brand-light);color:var(--brand-dark);
+    padding:3px 10px;border-radius:999px;font-weight:600;
+  }
+
+  /* ---------- 榜单 ---------- */
+  .rank-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:34px;align-items:start;}
+  .rank-list{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  .rank-item{
+    display:flex;gap:16px;align-items:flex-start;
+    padding:16px 20px;border-bottom:1px solid var(--line);transition:background .2s;
+  }
+  .rank-item:last-child{border-bottom:none;}
+  .rank-item:hover{background:#fafbfc;}
+  .rank-no{
+    flex-shrink:0;width:28px;height:28px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:13.5px;font-weight:800;background:var(--bg);color:var(--ink-soft);
+  }
+  .rank-item:nth-child(1) .rank-no{background:#fef3c7;color:#b45309;}
+  .rank-item:nth-child(2) .rank-no{background:#e5e7eb;color:#374151;}
+  .rank-item:nth-child(3) .rank-no{background:#ffedd5;color:#c2410c;}
+  .rank-info h4{font-size:15px;font-weight:600;margin-bottom:4px;line-height:1.5;}
+  .rank-info p{font-size:13px;color:var(--ink-soft);}
+  .rank-info .tags{margin-top:7px;display:flex;gap:7px;flex-wrap:wrap;}
+  .rank-info .tags span{
+    font-size:11.8px;color:var(--ink-soft);
+    background:var(--bg);padding:2px 9px;border-radius:999px;
+  }
+
+  /* 侧栏 */
+  .side-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;margin-bottom:22px;
+  }
+  .side-card h3{
+    font-size:16px;font-weight:700;margin-bottom:16px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .side-card h3::before{
+    content:"";width:4px;height:15px;border-radius:2px;background:var(--brand);
+  }
+  .tool-list li{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.3px;
+  }
+  .tool-list li:last-child{border-bottom:none;padding-bottom:0;}
+  .tool-list li span:last-child{font-size:12.6px;color:var(--ink-soft);flex-shrink:0;}
+  .notice{
+    background:linear-gradient(135deg,#fff7ed,#ffedd5);
+    border:1px solid rgba(232,89,12,.2);border-radius:var(--radius);
+    padding:20px 22px;font-size:14px;color:#7c2d12;line-height:1.75;
+  }
+  .notice strong{display:block;margin-bottom:7px;font-size:15px;color:var(--brand-dark);}
+
+  /* ---------- 指南 ---------- */
+  .guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+  .guide-item{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;transition:all .22s;
+  }
+  .guide-item:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+  .guide-item .num{
+    font-size:13px;font-weight:800;color:var(--brand);
+    letter-spacing:1px;margin-bottom:12px;display:block;
+  }
+  .guide-item h3{font-size:17px;font-weight:700;margin-bottom:11px;}
+  .guide-item p{font-size:14.3px;color:var(--ink-soft);line-height:1.75;}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:860px;margin:0 auto;}
+  .faq-item{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    margin-bottom:12px;overflow:hidden;transition:border-color .2s;
+  }
+  .faq-item[open]{border-color:rgba(232,89,12,.4);}
+  .faq-item summary{
+    padding:18px 22px;font-size:15.5px;font-weight:600;cursor:pointer;
+    list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;
+    transition:color .2s;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";font-size:22px;font-weight:400;color:var(--brand);
+    flex-shrink:0;line-height:1;transition:transform .25s;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item summary:hover{color:var(--brand-dark);}
+  .faq-answer{
+    padding:0 22px 20px;font-size:14.5px;color:var(--ink-soft);line-height:1.8;
+    border-top:1px solid var(--line);padding-top:16px;margin:0 22px 20px;
+    padding-left:0;padding-right:0;
+  }
+
+  /* ---------- 社区动态 ---------- */
+  .feed-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+  .feed-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;transition:all .22s;
+  }
+  .feed-card:hover{box-shadow:var(--shadow);}
+  .feed-user{display:flex;align-items:center;gap:11px;margin-bottom:13px;}
+  .avatar{
+    width:36px;height:36px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:14px;font-weight:700;
+  }
+  .avatar.a1{background:linear-gradient(135deg,#f97316,#fbbf24);}
+  .avatar.a2{background:linear-gradient(135deg,#0ea5e9,#22d3ee);}
+  .avatar.a3{background:linear-gradient(135deg,#16a34a,#84cc16);}
+  .avatar.a4{background:linear-gradient(135deg,#8b5cf6,#d946ef);}
+  .feed-user b{font-size:14px;display:block;}
+  .feed-user span{font-size:12px;color:var(--ink-soft);}
+  .feed-card p{font-size:14.2px;color:var(--ink-soft);line-height:1.7;}
+  .feed-foot{
+    margin-top:14px;padding-top:12px;border-top:1px solid var(--line);
+    display:flex;gap:18px;font-size:12.8px;color:var(--ink-soft);
+  }
+
+  /* ---------- 页脚 ---------- */
+  footer.site-footer{
+    background:#1f2328;color:#9aa3ad;padding:52px 0 0;font-size:14px;
+  }
+  .footer-grid{
+    display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;
+    padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09);
+  }
+  .footer-brand .logo-text b{color:#fff;}
+  .footer-brand .logo-text span{color:#7d8792;}
+  .footer-brand p{margin-top:16px;line-height:1.8;font-size:13.5px;max-width:320px;}
+  .footer-col h4{color:#fff;font-size:15px;font-weight:700;margin-bottom:16px;}
+  .footer-col li{margin-bottom:10px;}
+  .footer-col a{font-size:13.8px;color:#9aa3ad;transition:color .2s;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:20px 0;font-size:13px;flex-wrap:wrap;
+  }
+  .footer-bottom nav{display:flex;gap:20px;flex-wrap:wrap;}
+  .footer-bottom nav a:hover{color:#fff;}
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .rank-layout{grid-template-columns:1fr;gap:26px;}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:30px;}
+  }
+  @media (max-width:820px){
+    .main-nav{
+      display:none;position:absolute;top:72px;left:0;right:0;
+      background:#fff;flex-direction:column;padding:12px 20px 18px;
+      border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.08);
+      gap:4px;justify-content:flex-start;
+    }
+    .main-nav.open{display:flex;}
+    .main-nav a{padding:11px 14px;}
+    .menu-toggle{display:block;}
+    .search-box{display:none;}
+    header.site-header{position:relative;}
+  }
+  @media (max-width:620px){
+    body{font-size:15.4px;}
+    .hero{padding:38px 0 36px;}
+    section.block{padding:42px 0;}
+    .hero-stats{gap:24px;}
+    .hero-stats div b{font-size:19px;}
+    .topbar .wrap{height:auto;padding:8px 20px;justify-content:center;}
+    .topbar nav{display:none;}
+    .header-inner{height:64px;}
+    .logo-text b{font-size:17px;}
+    .btn-join{padding:8px 15px;font-size:13.6px;}
+    .footer-grid{grid-template-columns:1fr;gap:26px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+    .cat-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;}
+    .cat-card{padding:16px 14px;}
+    .tutorial-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 顶部信息条 -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tip"><span class="dot"></span>动手不必等灵感，从一个能完成的小项目开始</div>
+    <nav>
+      <a href="#tutorials">教程库</a>
+      <a href="#guide">入门指南</a>
+      <a href="#faq">常见问题</a>
+      <a href="#community">社区动态</a>
+    </nav>
+  </div>
+</div>
+
+<!-- 页眉 -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">搞</span>
+      <span class="logo-text">
+        <b>我爱搞</b>
+        <span>DIY &amp; MAKE</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#top" class="active">首页</a>
+      <a href="#categories">动手分类</a>
+      <a href="#tutorials">制作教程</a>
+      <a href="#ranking">热门榜单</a>
+      <a href="#guide">入门指南</a>
+      <a href="#faq">常见问题</a>
+      <a href="#community">社区</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input type="search" placeholder="搜索教程、工具、材料…" aria-label="站内搜索">
+      </div>
+      <button class="btn-join" type="button">加入社区</button>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="展开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">🔧 面向动手爱好者的实践社区</span>
+        <h1>把想法<em>动手搞</em>出来，从第一个小项目开始</h1>
+        <p class="lead">
+          “我爱搞”是一个围绕创意 DIY 与动手实践的内容社区。这里整理手工制作教程、工具使用说明、
+          材料选购思路和安全注意事项，帮助你把零散的想法变成看得见、用得上的实物。
+          不追求一步到位的专业水准，更看重能不能真正动手做完一件事。
+        </p>
+        <div class="hero-cta">
+          <a href="#tutorials" class="btn-primary">浏览制作教程</a>
+          <a href="#guide" class="btn-ghost">新手入门路径</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>8 大类</b><span>动手方向</span></div>
+          <div><b>分阶教程</b><span>入门到进阶</span></div>
+          <div><b>工具与安全</b><span>实用说明</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h3>新手第一次动手，建议这样安排</h3>
+        <ul class="step-list">
+          <li>
+            <span class="step-num">1</span>
+            <span><strong>先选低门槛项目。</strong>纸艺、简单收纳改造、基础拼装这类不需要大型工具的方向，最容易获得完成感。</span>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <span><strong>再配基础工具。</strong>先用手边已有的工具完成一个项目，确认兴趣后再逐步添置，避免一次性投入过多。</span>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <span><strong>按教程完整走一遍。</strong>不要跳步骤，尤其是测量、固定和收尾环节，它们决定成品是否耐用。</span>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <span><strong>记录问题并复盘。</strong>把失败的地方写下来，下一次动手会明显更顺。</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section class="block" id="categories">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>动手分类</h2>
+          <p>按材料和技能方向划分，方便你快速找到适合自己的入口</p>
+        </div>
+        <a href="#tutorials" class="more">查看全部教程 →</a>
+      </div>
+
+      <div class="cat-grid">
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">📐</div>
+          <h3>纸艺与手工</h3>
+          <p>折纸、纸模型、手账排版、卡片制作，材料便宜、容错率高。</p>
+        </a>
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">🔌</div>
+          <h3>电子制作</h3>
+          <p>基础电路、焊接入门、传感器小项目与常见元件识别。</p>
+        </a>
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">🪵</div>
+          <h3>木工与结构</h3>
+          <p>板材切割、连接方式、打磨上漆，以及小型家具与置物架。</p>
+        </a>
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">🧩</div>
+          <h3>模型与拼装</h3>
+          <p>拼装模型、涂装基础、零件处理与展示收纳方法。</p>
+        </a>
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">🏠</div>
+          <h3>家居改造</h3>
+          <p>旧物利用、收纳优化、墙面与灯光的小幅调整思路。</p>
+        </a>
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">🌱</div>
+          <h3>园艺与阳台</h3>
+          <p>种植容器、土壤配比、阳台空间利用与简易灌溉。</p>
+        </a>
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">🧵</div>
+          <h3>布艺与缝补</h3>
+          <p>基础针法、布料选择、日常修补与简单布包制作。</p>
+        </a>
+        <a class="cat-card" href="#tutorials">
+          <div class="cat-icon">🎨</div>
+          <h3>涂装与美化</h3>
+          <p>底漆面漆的区别、上色顺序、常见翻新处理手法。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教程 -->
+  <section class="block alt" id="tutorials">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>精选制作教程</h2>
+          <p>按难度标注，每个教程都尽量说明材料、步骤和容易出错的环节</p>
+        </div>
+        <a href="#ranking" class="more">看热门榜单 →</a>
+      </div>
+
+      <div class="tutorial-grid">
+        <article class="t-card">
+          <div class="t-thumb g1">📦<span class="t-badge">入门</span></div>
+          <div class="t-body">
+            <h3>用纸板做一个桌面收纳盒</h3>
+            <p>从测量、裁切到粘合成型，全程只需美工刀、直尺和胶水。重点在于折边预留尺寸，做对了成品会非常规整。</p>
+            <div class="t-meta"><span class="lvl">纸艺手工</span><span>约 1 小时</span></div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-thumb g2">💡<span class="t-badge">入门</span></div>
+          <div class="t-body">
+            <h3>认识常见电子元件与基础焊接</h3>
+            <p>电阻、电容、二极管的作用与识别方式，配合焊接姿势、温度和时间的控制要点，是电子动手的第一课。</p>
+            <div class="t-meta"><span class="lvl">电子制作</span><span>约 2 小时</span></div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-thumb g3">🪴<span class="t-badge">入门</span></div>
+          <div class="t-body">
+            <h3>阳台种菜容器的选择与改造</h3>
+            <p>排水孔、容积和摆放朝向是三个关键点。介绍如何利用常见容器改造出适合叶菜生长的种植箱。</p>
+            <div class="t-meta"><span class="lvl">园艺阳台</span><span>约 1.5 小时</span></div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-thumb g4">🪑<span class="t-badge">进阶</span></div>
+          <div class="t-body">
+            <h3>木板连接方式与简易置物架制作</h3>
+            <p>对比螺丝、榫接与角码连接的适用场景，并给出一个可落地的小型墙面置物架制作流程。</p>
+            <div class="t-meta"><span class="lvl">木工结构</span><span>约 3 小时</span></div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-thumb g5">🧴<span class="t-badge">入门</span></div>
+          <div class="t-body">
+            <h3>旧家具翻新：从打磨到上漆</h3>
+            <p>翻新成败大多取决于前期处理。讲清打磨目数、清洁除油、底漆与面漆的间隔时间等容易被忽略的细节。</p>
+            <div class="t-meta"><span class="lvl">涂装美化</span><span>约 半天</span></div>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="t-thumb g6">🧵<span class="t-badge">入门</span></div>
+          <div class="t-body">
+            <h3>基础针法练习与日常衣物缝补</h3>
+            <p>平针、回针、锁边针三种针法足以应付大部分修补场景，附布料选择与线材搭配的基本判断方法。</p>
+            <div class="t-meta"><span class="lvl">布艺缝补</span><span>约 1 小时</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 + 侧栏 -->
+  <section class="block" id="ranking">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>近期热门内容</h2>
+          <p>根据社区浏览与收藏情况整理，供选题和入门参考</p>
+        </div>
+      </div>
+
+      <div class="rank-layout">
+        <div class="rank-list">
+          <div class="rank-item">
+            <span class="rank-no">1</span>
+            <div class="rank-info">
+              <h4>新手工具清单：动手前到底该买什么</h4>
+              <p>按纸艺、电子、木工三个方向分别列出最低配置，并说明哪些工具可以先用替代品。</p>
+              <div class="tags"><span>工具选购</span><span>新手必读</span></div>
+            </div>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">2</span>
+            <div class="rank-info">
+              <h4>动手过程中的安全注意事项汇总</h4>
+              <p>涉及刀具、电动工具、焊接、胶粘剂和粉尘防护，逐项给出可执行的操作建议。</p>
+              <div class="tags"><span>安全规范</span><span>长期更新</span></div>
+            </div>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">3</span>
+            <div class="rank-info">
+              <h4>材料怎么选：常见板材、胶水与涂料对比</h4>
+              <p>从使用场景出发，说明不同材料的强度、加工难度和适用环境差异。</p>
+              <div class="tags"><span>材料知识</span><span>进阶</span></div>
+            </div>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">4</span>
+            <div class="rank-info">
+              <h4>做失败了怎么办：常见问题排查思路</h4>
+              <p>尺寸偏差、粘接不牢、上色不均、电路不通，按现象反推原因的处理方法。</p>
+              <div class="tags"><span>问题排查</span><span>实战</span></div>
+            </div>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">5</span>
+            <div class="rank-info">
+              <h4>小空间也能动手：家庭工作区布置建议</h4>
+              <p>在有限面积里规划操作台、收纳与照明，兼顾安全和日常使用。</p>
+              <div class="tags"><span>空间规划</span><span>实用</span></div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="side-card">
+            <h3>常用工具分类速查</h3>
+            <ul class="tool-list">
+              <li><span>测量与划线</span><span>直尺 / 卷尺 / 角尺</span></li>
+              <li><span>切割</span><span>美工刀 / 手锯 / 剪刀</span></li>
+              <li><span>固定与夹持</span><span>台钳 / 夹具 / 胶带</span></li>
+              <li><span>连接</span><span>螺丝刀 / 胶水 / 焊台</span></li>
+              <li><span>表面处理</span><span>砂纸 / 锉刀 / 毛刷</span></li>
+              <li><span>防护</span><span>手套 / 护目镜 / 口罩</span></li>
+            </ul>
+          </div>
+
+          <div class="notice">
+            <strong>⚠ 动手前的三点提醒</strong>
+            使用刀具和电动工具时保持专注，不要疲劳操作；胶粘剂、油漆等材料应在通风处使用并阅读说明；
+            涉及电路的项目务必断电操作，不确定时先查资料再动手。
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 入门指南 -->
+  <section class="block alt" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>从零开始的动手路径</h2>
+          <p>不依赖天赋，靠方法和重复把一件事做完</p>
+        </div>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-item">
+          <span class="num">STEP 01</span>
+          <h3>明确你想解决什么问题</h3>
+          <p>
+            动手的起点通常不是“我想做点什么”，而是“我这里不太方便”。
+            桌面太乱、东西没处放、旧物舍不得扔，这些具体需求比抽象的创作冲动更容易推动项目落地。
+            先写下一句话描述问题，再去找对应的做法。
+          </p>
+        </div>
+        <div class="guide-item">
+          <span class="num">STEP 02</span>
+          <h3>把项目拆到能执行的大小</h3>
+          <p>
+            一个完整的作品往往包含测量、裁切、组装、表面处理多个环节。
+            把它拆成若干可以在一次时间内完成的小步骤，每完成一步就检查一次，
+            比一口气做完再返工要省时得多。
+          </p>
+        </div>
+        <div class="guide-item">
+          <span class="num">STEP 03</span>
+          <h3>接受不完美，先完成再优化</h3>
+          <p>
+            第一次动手出现尺寸偏差、接缝不齐、颜色不均都很正常。
+            与其反复重做第一步，不如先把整体做完，再针对最影响使用的问题改进。
+            完成一个粗糙的成品，收获远大于停留在准备阶段。
+          </p>
+        </div>
+        <div class="guide-item">
+          <span class="num">STEP 04</span>
+          <h3>记录过程，形成自己的经验</h3>
+          <p>
+            记下用了什么材料、花了多少时间、哪一步最费劲、下次要改什么。
+            这些记录积累下来，就是你自己的动手手册，也是社区里最有价值的内容。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>常见问题</h2>
+          <p>关于动手实践，新手问得最多的几个问题</p>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>完全没有基础，可以从哪里开始？</summary>
+          <div class="faq-answer">
+            建议从材料成本低、工具要求少的项目入手，例如纸艺、简单收纳改造或基础拼装。
+            这类项目的容错率高，即使做坏了损失也不大，能帮助你快速建立对尺寸、结构和手感的直观认识。
+            完成两三个小项目后，再决定是否往电子、木工等需要更多工具的方向延伸。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>需要一次性买齐所有工具吗？</summary>
+          <div class="faq-answer">
+            不需要。工具应当跟着项目走，而不是先囤后找用途。比较稳妥的做法是：先确定一个具体项目，
+            只购买完成它必需的工具，做完之后再评估哪些工具使用频率高、值得长期保留。
+            这样既能控制支出，也能避免买回一堆闲置物品。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>动手过程中最容易忽视的安全问题是什么？</summary>
+          <div class="faq-answer">
+            常见的有三类：一是切割和打磨时没有固定工件，导致打滑受伤；二是使用胶粘剂、
+            油漆等化学品时通风不足；三是接触电路项目时未确认断电。此外，粉尘防护和护目镜
+            在木工、打磨场景中也很重要。养成动手前先检查环境、动手后清理台面的习惯，能减少大部分风险。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>做出来的东西不好看，是不是不适合动手？</summary>
+          <div class="faq-answer">
+            手工成品的完成度很大程度上取决于练习次数和对材料的熟悉程度，而不是天赋。
+            多数看起来精致的作品，背后都有若干次不太成功的尝试。把注意力放在功能是否可用、
+            结构是否牢固上，外观会随着经验积累自然提升。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>家里空间小，还能动手做东西吗？</summary>
+          <div class="faq-answer">
+            可以。空间有限时，优先选择桌面级项目，并注意三点：操作区域尽量靠近通风处；
+            工具集中收纳，用完即归位；切割、打磨等产生碎屑的环节铺上垫板或旧报纸，
+            便于快速清理。很多动手项目对面积的要求并没有想象中高。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>如何判断一个教程是否值得跟着做？</summary>
+          <div class="faq-answer">
+            可以重点看三方面：是否列出了完整材料和工具清单；步骤是否说明了关键尺寸或参数；
+            是否提到了容易出错的地方。一份负责任的教程通常不会只展示成品效果，
+            而会把过程中的难点和替代方案讲清楚。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社区动态 -->
+  <section class="block alt" id="community">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>社区动态</h2>
+          <p>来自动手爱好者的过程记录与经验分享</p>
+        </div>
+      </div>
+
+      <div class="feed-grid">
+        <div class="feed-card">
+          <div class="feed-user">
+            <span class="avatar a1">木</span>
+            <div><b>木作小林</b><span>木工结构</span></div>
+          </div>
+          <p>第一次做置物架，板材切割尺寸差了将近五毫米，装上去才发现层板不平。后来重新量了一遍，把误差留在了不显眼的一侧，整体还算能用。</p>
+          <div class="feed-foot"><span>💬 24 条讨论</span><span>👍 86</span></div>
+        </div>
+
+        <div class="feed-card">
+          <div class="feed-user">
+            <span class="avatar a2">电</span>
+            <div><b>焊点不圆</b><span>电子制作</span></div>
+          </div>
+          <p>分享一个焊接小经验：烙铁头氧化之后传热会明显变差，很容易出现虚焊。养成随手擦头的习惯，焊接质量会稳定很多。</p>
+          <div class="feed-foot"><span>💬 31 条讨论</span><span>👍 112</span></div>
+        </div>
+
+        <div class="feed-card">
+          <div class="feed-user">
+            <span class="avatar a3">植</span>
+            <div><b>阳台三分地</b><span>园艺阳台</span></div>
+          </div>
+          <p>用旧塑料箱改了个种植箱，底部打了六个排水孔，侧面加了一层无纺布防止漏土。种了两轮叶菜，目前长势还不错。</p>
+          <div class="feed-foot"><span>💬 18 条讨论</span><span>👍 74</span></div>
+        </div>
+
+        <div class="feed-card">
+          <div class="feed-user">
+            <span class="avatar a4">漆</span>
+            <div><b>翻新日记</b><span>涂装美化</span></div>
+          </div>
+          <p>翻新旧柜子最大的教训是别省打磨这一步。第一次没打磨直接上漆，不到一个月就开始起皮，返工比从头做还费时间。</p>
+          <div class="feed-foot"><span>💬 27 条讨论</span><span>👍 95</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark">搞</span>
+          <span class="logo-text">
+            <b>我爱搞</b>
+            <span>DIY &amp; MAKE</span>
+          </span>
+        </div>
+        <p>一个围绕创意 DIY 与动手实践的内容社区，整理教程、工具说明与经验分享，帮助你把想法一步步做出来。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>内容分类</h4>
+        <ul>
+          <li><a href="#categories">纸艺与手工</a></li>
+          <li><a href="#categories">电子制作</a></li>
+          <li><a href="#categories">木工与结构</a></li>
+          <li><a href="#categories">家居改造</a></li>
+          <li><a href="#categories">园艺与阳台</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>快速入口</h4>
+        <ul>
+          <li><a href="#tutorials">制作教程</a></li>
+          <li><a href="#ranking">热门榜单</a></li>
+          <li><a href="#guide">入门指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#community">社区动态</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>关于本站</h4>
+        <ul>
+          <li><a href="#top">站点介绍</a></li>
+          <li><a href="#faq">安全提示</a></li>
+          <li><a href="#guide">内容规范</a></li>
+          <li><a href="#community">参与方式</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 我爱搞 · 动手实践内容社区</span>
+      <nav>
+        <a href="#top">返回顶部</a>
+        <a href="#faq">常见问题</a>
+        <a href="#guide">入门指南</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('mainNav');
+    if(toggle && nav){
+      toggle.addEventListener('click', function(){
+        nav.classList.toggle('open');
+      });
+      nav.addEventListener('click', function(e){
+        if(e.target.tagName === 'A' && window.innerWidth <= 820){
+          nav.classList.remove('open');
+        }
+      });
+    }
+
+    var links = document.querySelectorAll('.main-nav a');
+    links.forEach(function(link){
+      link.addEventListener('click', function(){
+        links.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+      });
+    });
+  })();
+</script>
+
+</body>
+  </html>
