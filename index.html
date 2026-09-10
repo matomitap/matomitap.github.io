@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>浪荡总受BL高肉-原创耽美小说设定解析与阅读导航</title>
+<meta name="description" content="浪荡总受BL高肉专题页面，梳理该题材常见人物设定、剧情结构与阅读偏好，提供作品标签导航、内容分级说明与理性阅读建议，帮助读者准确找到想看的原创耽美内容。">
+<meta name="keywords" content="浪荡总受BL高肉,耽美小说,原创BL,总受设定,高肉标签,BL阅读导航">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#140f1c;
+--bg2:#1d1528;
+--card:#241a33;
+--card2:#2c2040;
+--rose:#e8688c;
+--rose2:#ff9db6;
+--violet:#a06cd5;
+--gold:#f0c987;
+--text:#f3ecf7;
+--muted:#b6a6c9;
+--line:rgba(232,104,140,.22);
+--radius:16px;
+}
+html{scroll-behavior:smooth}
+body{
+background:var(--bg);
+color:var(--text);
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+line-height:1.75;
+font-size:16px;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header.site-head{
+position:sticky;top:0;z-index:50;
+background:rgba(20,15,28,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+.head-inner{
+display:flex;align-items:center;justify-content:space-between;
+gap:20px;height:66px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:.5px}
+.brand .dot{
+width:30px;height:30px;border-radius:9px;
+background:linear-gradient(135deg,var(--rose),var(--violet));
+display:flex;align-items:center;justify-content:center;
+font-size:15px;color:#fff;font-weight:800;
+}
+.brand small{display:block;font-size:11px;color:var(--muted);font-weight:400;letter-spacing:1px}
+nav.main-nav{display:flex;gap:26px;font-size:15px}
+nav.main-nav a{color:var(--muted);transition:.2s;padding:4px 0;border-bottom:2px solid transparent}
+nav.main-nav a:hover{color:var(--rose2);border-bottom-color:var(--rose)}
+.head-cta{
+padding:8px 18px;border-radius:999px;font-size:14px;
+background:linear-gradient(135deg,var(--rose),var(--violet));
+color:#fff;font-weight:600;white-space:nowrap;
+}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 11px;font-size:16px;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{
+position:relative;overflow:hidden;
+padding:74px 0 66px;
+background:
+radial-gradient(circle at 15% 12%,rgba(232,104,140,.22),transparent 46%),
+radial-gradient(circle at 85% 82%,rgba(160,108,213,.22),transparent 48%),
+var(--bg2);
+border-bottom:1px solid var(--line);
+}
+.hero::after{
+content:"";position:absolute;inset:0;
+background:repeating-linear-gradient(115deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px);
+pointer-events:none;
+}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .95fr;gap:48px;align-items:center}
+.tag-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
+.tag{
+font-size:12.5px;padding:5px 13px;border-radius:999px;
+border:1px solid var(--line);color:var(--rose2);
+background:rgba(232,104,140,.08);letter-spacing:.4px;
+}
+.hero h1{
+font-size:clamp(28px,4.4vw,46px);
+line-height:1.28;font-weight:800;letter-spacing:-.5px;
+margin-bottom:20px;
+}
+.hero h1 em{
+font-style:normal;
+background:linear-gradient(120deg,var(--rose2),var(--gold));
+-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{color:var(--muted);font-size:16.5px;max-width:600px;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.btn{
+display:inline-block;padding:12px 28px;border-radius:999px;
+font-size:15px;font-weight:600;transition:.22s;border:1px solid transparent;
+}
+.btn-primary{background:linear-gradient(135deg,var(--rose),var(--violet));color:#fff;box-shadow:0 10px 26px -12px rgba(232,104,140,.85)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(232,104,140,.95)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--rose);color:var(--rose2)}
+
+.hero-side{
+background:linear-gradient(160deg,var(--card),var(--bg2));
+border:1px solid var(--line);border-radius:var(--radius);
+padding:26px 24px;
+}
+.hero-side h3{font-size:15px;color:var(--gold);letter-spacing:1px;margin-bottom:16px;font-weight:700}
+.hero-side ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.hero-side li{display:flex;gap:12px;font-size:14.5px;color:var(--muted);line-height:1.6}
+.hero-side li span.num{
+flex:0 0 22px;height:22px;border-radius:7px;margin-top:2px;
+background:rgba(232,104,140,.16);color:var(--rose2);
+font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- section base ---------- */
+section{padding:64px 0}
+section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:34px;max-width:760px}
+.sec-head .kicker{
+font-size:12.5px;letter-spacing:2.4px;color:var(--rose);text-transform:uppercase;font-weight:700;
+display:block;margin-bottom:10px;
+}
+.sec-head h2{font-size:clamp(21px,2.7vw,29px);font-weight:800;line-height:1.35;margin-bottom:12px}
+.sec-head p{color:var(--muted);font-size:15.5px}
+
+/* ---------- 设定解析 ---------- */
+.def-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.def-card{
+background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+padding:26px 24px;transition:.24s;
+}
+.def-card:hover{transform:translateY(-4px);border-color:rgba(232,104,140,.5);background:var(--card2)}
+.def-card .ico{
+width:42px;height:42px;border-radius:12px;margin-bottom:16px;
+display:flex;align-items:center;justify-content:center;font-size:19px;
+background:linear-gradient(135deg,rgba(232,104,140,.28),rgba(160,108,213,.28));
+border:1px solid var(--line);
+}
+.def-card h3{font-size:17px;margin-bottom:10px;font-weight:700}
+.def-card p{font-size:14.5px;color:var(--muted)}
+
+/* ---------- 标签导航 ---------- */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}
+.tag-cloud a{
+padding:9px 18px;border-radius:999px;font-size:14px;
+background:var(--card);border:1px solid var(--line);color:var(--muted);
+transition:.2s;
+}
+.tag-cloud a:hover{color:#fff;border-color:var(--rose);background:rgba(232,104,140,.16)}
+.tag-cloud a.hot{color:var(--gold);border-color:rgba(240,201,135,.4)}
+
+/* ---------- 作品卡片 ---------- */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work-card{
+background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+overflow:hidden;display:flex;flex-direction:column;transition:.24s;
+}
+.work-card:hover{transform:translateY(-4px);border-color:rgba(232,104,140,.5)}
+.work-cover{
+height:132px;
+background:linear-gradient(135deg,rgba(232,104,140,.35),rgba(160,108,213,.35));
+display:flex;align-items:center;justify-content:center;
+font-size:26px;font-weight:800;letter-spacing:3px;color:rgba(255,255,255,.9);
+position:relative;
+}
+.work-cover::after{
+content:"";position:absolute;inset:0;
+background:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 1px,transparent 1px 8px);
+}
+.work-body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.work-body h3{font-size:16.5px;margin-bottom:9px;font-weight:700}
+.work-body p{font-size:14px;color:var(--muted);flex:1;margin-bottom:16px}
+.work-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12px}
+.work-meta span{
+padding:3px 10px;border-radius:6px;
+background:rgba(160,108,213,.16);color:var(--rose2);
+}
+
+/* ---------- 阅读建议 ---------- */
+.advice-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start}
+.advice-list{list-style:none;display:flex;flex-direction:column;gap:18px}
+.advice-list li{
+background:var(--card);border-left:3px solid var(--rose);
+border-radius:0 12px 12px 0;padding:18px 20px;
+}
+.advice-list li strong{display:block;font-size:15.5px;margin-bottom:6px;color:var(--rose2)}
+.advice-list li p{font-size:14.5px;color:var(--muted)}
+.notice-box{
+background:linear-gradient(150deg,var(--card2),var(--card));
+border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;
+}
+.notice-box h3{font-size:16px;color:var(--gold);margin-bottom:14px;font-weight:700}
+.notice-box p{font-size:14.5px;color:var(--muted);margin-bottom:12px}
+.notice-box p:last-child{margin-bottom:0}
+
+/* ---------- FAQ ---------- */
+.faq-list{display:flex;flex-direction:column;gap:14px;max-width:900px}
+details.faq{
+background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:0 22px;transition:.2s;
+}
+details.faq[open]{border-color:rgba(232,104,140,.5);background:var(--card2)}
+details.faq summary{
+list-style:none;cursor:pointer;padding:19px 0;
+font-size:16px;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+content:"+";font-size:20px;color:var(--rose);font-weight:400;transition:.2s;
+}
+details.faq[open] summary::after{content:"−"}
+details.faq .ans{padding:0 0 20px;font-size:14.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:16px}
+
+/* ---------- footer ---------- */
+footer.site-foot{
+background:var(--bg2);border-top:1px solid var(--line);
+padding:52px 0 30px;margin-top:10px;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;margin-bottom:38px}
+.foot-brand .brand{margin-bottom:14px}
+.foot-brand p{font-size:14px;color:var(--muted);max-width:320px}
+.foot-col h4{font-size:14px;color:var(--gold);margin-bottom:14px;font-weight:700;letter-spacing:.6px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-col a{font-size:14px;color:var(--muted);transition:.2s}
+.foot-col a:hover{color:var(--rose2)}
+.foot-bottom{
+border-top:1px solid var(--line);padding-top:22px;
+display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+font-size:13px;color:var(--muted);
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+.hero-grid{grid-template-columns:1fr;gap:34px}
+.def-grid{grid-template-columns:repeat(2,1fr)}
+.work-grid{grid-template-columns:repeat(2,1fr)}
+.advice-grid{grid-template-columns:1fr}
+.foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+nav.main-nav{
+display:none;position:absolute;top:66px;left:0;right:0;
+flex-direction:column;gap:0;
+background:rgba(20,15,28,.98);border-bottom:1px solid var(--line);
+padding:8px 20px 16px;
+}
+nav.main-nav.open{display:flex}
+nav.main-nav a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.menu-toggle{display:block}
+.head-cta{display:none}
+.hero{padding:52px 0 48px}
+section{padding:48px 0}
+.def-grid{grid-template-columns:1fr}
+.work-grid{grid-template-columns:1fr}
+.foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a href="#" class="brand">
+      <span class="dot">浪</span>
+      <span>浪荡总受<small>BL 设定阅读导航</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#define">设定解析</a>
+      <a href="#tags">标签导航</a>
+      <a href="#works">作品速览</a>
+      <a href="#advice">阅读建议</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#define" class="head-cta">先看设定</a>
+    <button class="menu-toggle" id="menuBtn" aria-label="展开导航">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tag-row">
+          <span class="tag">原创 BL</span>
+          <span class="tag">总受设定</span>
+          <span class="tag">成人向标签</span>
+          <span class="tag">阅读导航</span>
+        </div>
+        <h1>浪荡总受BL高肉：<em>设定含义、常见写法与理性阅读入口</em></h1>
+        <p class="lead">“浪荡总受”通常指在原创耽美作品中，主角性格主动、情感经历丰富或态度不拘，而情感关系中始终处于“受”的位置；“高肉”则是对作品中含有较多成人向描写的内容分级提示。本页不提供具体正文，而是帮你理清这类标签的含义、常见剧情走向、筛选方式与阅读注意事项。</p>
+        <div class="hero-actions">
+          <a href="#define" class="btn btn-primary">了解设定含义</a>
+          <a href="#advice" class="btn btn-ghost">阅读前必看</a>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <h3>本页能帮你解决什么</h3>
+        <ul>
+          <li><span class="num">1</span>搞清“浪荡总受”与“高肉”分别指什么，避免标签误读。</li>
+          <li><span class="num">2</span>了解这类作品常见的人物关系与剧情结构。</li>
+          <li><span class="num">3</span>学会用标签组合筛选，快速找到符合口味的内容。</li>
+          <li><span class="num">4</span>掌握成人向内容的阅读边界与自我管理方法。</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 设定解析 -->
+  <section id="define">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Setting Guide</span>
+        <h2>拆开看：这个标签组合到底在说什么</h2>
+        <p>标签是读者筛选内容的工具。把“浪荡”“总受”“高肉”三个部分分开理解，比笼统地当成一个词更容易判断作品是否合自己口味。</p>
+      </div>
+      <div class="def-grid">
+        <article class="def-card">
+          <div class="ico">浪</div>
+          <h3>“浪荡”指向性格与经历</h3>
+          <p>在耽美语境里，“浪荡”多用来形容主角性格外放、情感态度随性，或有过较丰富的情感经历。它强调的是人物气质与行为方式，并不等同于品行评价，具体呈现方式因作者而异。</p>
+        </article>
+        <article class="def-card">
+          <div class="ico">受</div>
+          <h3>“总受”是关系定位</h3>
+          <p>“总受”指在作品的多组情感关系中，主角始终处于被追求、被主导的一方。这一设定常用于多线情感或群像结构，重点在于关系位置的固定，而非人物强弱。</p>
+        </article>
+        <article class="def-card">
+          <div class="ico">肉</div>
+          <h3>“高肉”是内容分级提示</h3>
+          <p>“高肉”表示作品中成人向描写的比重较高。它属于阅读前的分级提醒，帮助读者判断内容是否适合自己，也提示作品可能不适宜未成年人阅读。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 标签导航 -->
+  <section id="tags" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Tag Navigation</span>
+        <h2>常用标签组合导航</h2>
+        <p>单一标签的信息量有限，实际找文时通常是多个标签叠加使用。以下为常见的搭配方向，可按自己的接受度逐层收窄范围。</p>
+      </div>
+      <div class="tag-cloud">
+        <a href="#define" class="hot">浪荡总受</a>
+        <a href="#define">高肉</a>
+        <a href="#define">多线情感</a>
+        <a href="#define">强强</a>
+        <a href="#define">年上</a>
+        <a href="#define">年下</a>
+        <a href="#define">都市背景</a>
+        <a href="#define">校园背景</a>
+        <a href="#define">古代架空</a>
+        <a href="#define">轻松向</a>
+        <a href="#define">虐心向</a>
+        <a href="#define">治愈向</a>
+        <a href="#define">群像</a>
+        <a href="#define">单主角视角</a>
+        <a href="#define">完结</a>
+        <a href="#define">连载中</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品速览 -->
+  <section id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Reading Direction</span>
+        <h2>常见剧情走向速览</h2>
+        <p>以下不是具体作品推荐，而是这类设定下反复出现的几种结构类型。了解结构，有助于你在浏览简介时更快判断是否符合预期。</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-cover">都市线</div>
+          <div class="work-body">
+            <h3>都市情感交错型</h3>
+            <p>主角在职场或社交圈中与人产生多段纠葛，性格外放但内心有明确底线。剧情多围绕关系推进与自我认知展开，节奏偏快。</p>
+            <div class="work-meta"><span>现代背景</span><span>多线关系</span><span>节奏明快</span></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-cover">古风线</div>
+          <div class="work-body">
+            <h3>架空权谋交织型</h3>
+            <p>以古代或架空世界为舞台，主角身份特殊，情感关系与势力博弈相互缠绕。人物动机复杂，适合偏好长线叙事的读者。</p>
+            <div class="work-meta"><span>架空设定</span><span>剧情向</span><span>长线叙事</span></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-cover">轻喜线</div>
+          <div class="work-body">
+            <h3>轻松日常推进型</h3>
+            <p>整体基调偏轻快，冲突强度低，重点放在人物互动与情绪张力上。适合想放松阅读、不希望被沉重剧情影响的读者。</p>
+            <div class="work-meta"><span>轻松向</span><span>日常感</span><span>低冲突</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 阅读建议 -->
+  <section id="advice" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Reading Advice</span>
+        <h2>阅读这类内容前，值得先想清楚几件事</h2>
+        <p>成人向标签意味着更高的内容强度。理性选择、主动管理阅读节奏，比盲目追更更重要。</p>
+      </div>
+      <div class="advice-grid">
+        <ul class="advice-list">
+          <li>
+            <strong>先确认年龄与内容分级</strong>
+            <p>含有成人向描写的作品通常设有年龄提示。未满法定年龄的读者应主动回避此类内容，选择适合自身年龄的读物。</p>
+          </li>
+          <li>
+            <strong>分清虚构设定与现实关系</strong>
+            <p>小说中的关系模式服务于戏剧冲突，不等于现实中的相处范本。阅读时保持对虚构与现实的区分，是成熟读者的基本习惯。</p>
+          </li>
+          <li>
+            <strong>用标签组合精准筛选</strong>
+            <p>先锁定题材背景，再叠加情感走向与篇幅状态，最后确认内容分级。层层收窄比只看单一标签更省时间。</p>
+          </li>
+          <li>
+            <strong>控制阅读节奏，避免过度沉浸</strong>
+            <p>连续长时间阅读容易影响作息与情绪状态。给自己设定每天固定的阅读时段，比一次性追完更可持续。</p>
+          </li>
+          <li>
+            <strong>尊重作者的创作边界</strong>
+            <p>支持正版阅读渠道，不擅自转载、传播或二次加工他人作品，是对创作者最基本的尊重。</p>
+          </li>
+        </ul>
+        <div class="notice-box">
+          <h3>关于标签使用的提醒</h3>
+          <p>标签由作者或平台自行标注，不同平台对“高肉”“总受”等词的理解可能存在差异，实际内容仍以作品简介与分级说明为准。</p>
+          <p>如果某个标签让你感到不适，直接跳过即可，不必勉强自己适应。阅读本应是放松的事。</p>
+          <p>遇到来源不明的链接或要求付费解锁的页面，请提高警惕，避免个人信息与财产受损。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2>常见问题</h2>
+        <p>关于这个标签组合，读者最常提出的几个疑问。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>“浪荡总受”和“万人迷受”是同一个意思吗？</summary>
+          <div class="ans">两者有重叠但不完全等同。“万人迷受”强调被多人喜欢这一结果，“浪荡总受”更侧重主角自身的性格气质与情感态度。有些作品会同时使用这两个标签，具体含义以作者标注为准。</div>
+        </details>
+        <details class="faq">
+          <summary>“高肉”标签的作品是否一定不适合阅读？</summary>
+          <div class="ans">不是适不适合的问题，而是是否适合你。成人向内容有明确的受众边界，成年读者可根据自身偏好选择，未成年人则应主动回避。关键在于清楚自己的接受范围。</div>
+        </details>
+        <details class="faq">
+          <summary>怎么判断一部作品的内容强度？</summary>
+          <div class="ans">可以先看作品简介中的分级说明与标签数量，再看读者评论中对剧情比重的描述。多数平台会提供内容提示，认真阅读这些提示比事后后悔更有效。</div>
+        </details>
+        <details class="faq">
+          <summary>在哪里可以读到正规的原创耽美作品？</summary>
+          <div class="ans">建议选择有明确内容分级制度、支持作者签约与收益的正规原创文学平台。这类平台通常对内容审核更规范，阅读体验与账号安全也更有保障。</div>
+        </details>
+        <details class="faq">
+          <summary>为什么不同平台对同一标签的解释不一样？</summary>
+          <div class="ans">标签体系多为社区自发形成，缺乏统一标准，加上各平台审核尺度不同，理解上出现差异是正常现象。以具体作品的简介描述为准，比死记标签定义更实用。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="dot">浪</span>
+          <span>浪荡总受<small>BL 设定阅读导航</small></span>
+        </div>
+        <p>一个面向原创耽美读者的标签科普与阅读指引页面，帮助读者理解设定含义、理性筛选内容、保持健康的阅读习惯。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#define">设定解析</a></li>
+          <li><a href="#tags">标签导航</a></li>
+          <li><a href="#works">剧情走向</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>阅读参考</h4>
+        <ul>
+          <li><a href="#advice">阅读建议</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#advice">内容分级说明</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>温馨提示</h4>
+        <ul>
+          <li><a href="#advice">未成年人请回避成人向内容</a></li>
+          <li><a href="#advice">支持正版原创</a></li>
+          <li><a href="#advice">注意个人信息安全</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本页为标签科普与阅读指引，不提供任何作品正文或下载资源。</span>
+      <span>请理性阅读，合理安排时间。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('open');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ nav.classList.remove('open'); }
+    });
+  }
+})();
+</script>
+
+</body>
+  </html>
